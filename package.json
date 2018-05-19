@@ -1,0 +1,66 @@
+{
+  "name": "vue-a11y-announcer",
+  "version": "0.0.1",
+  "description": "A simple way with Vue to announce any information to the screen readers.",
+  "main": "dist/vue-a11y-announcer.js",
+  "scripts": {
+    "dev": "rollup --config rollup.config.dev.js --watch",
+    "dist": "rollup --config rollup.config.prod.js",
+    "release": "standard-version",
+    "test": "node_modules/.bin/cypress run",
+    "test:open": "node_modules/.bin/cypress open",
+    "projectPublish": "git push --follow-tags origin master && npm publish",
+    "publishDemo": "surge example"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vue-a11y/vue-a11y-announcer.git"
+  },
+  "keywords": [
+    "announcer",
+    "Vue.js",
+    "Vue",
+    "accessibility",
+    "a11y",
+    "screen",
+    "readers",
+    "Vision",
+    "Disability",
+    "JAWS",
+    "ChromeVox",
+    "NVDA"
+  ],
+  "author": "Alan Ktquez <ktquez@gmail.com> (https://medium.com/@ktquez)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vue-a11y/vue-a11y-announcer/issues"
+  },
+  "homepage": "https://github.com/vue-a11y/vue-a11y-announcer#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "chokidar": "^2.0.3",
+    "cypress": "^2.1.0",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-plugin-cypress": "^2.0.1",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "eslint-plugin-vue": "^4.5.0",
+    "rollup": "^0.58.2",
+    "rollup-plugin-babel": "^3.0.4",
+    "rollup-plugin-butternut": "^0.1.0",
+    "rollup-plugin-eslint": "^4.0.0",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-replace": "^2.0.0",
+    "rollup-plugin-vue": "^4.1.3",
+    "standard-version": "^4.3.0",
+    "vue": "^2.5.16",
+    "vue-template-compiler": "^2.5.16"
+  }
+}
