@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: 'VueA11YAnnouncer',
+  name: 'VueA11yAnnouncer',
   data () {
     return {
       content: ''
