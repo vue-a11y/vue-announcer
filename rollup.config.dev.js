@@ -29,8 +29,8 @@ export default {
   ],
   output: [
     {
-      name: 'VueA11yAnnouncer',
-      file: 'example/vue-a11y-announcer.js',
+      name: 'VueAnnouncer',
+      file: 'example/vue-announcer.js',
       format: 'umd'
     }
   ]

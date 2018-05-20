@@ -1,5 +1,5 @@
 {
-  "name": "example-vue-a11y-announcer",
+  "name": "example-vue-announcer",
   "description": "Example of how to announce information useful for screen readers",
   "version": "1.0.0",
   "author": "Alan Albuquerque (ktquez) <ktquez@gmail.com>",

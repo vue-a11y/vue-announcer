@@ -22,20 +22,20 @@ export default {
   ],
   output: [
     {
-      file: 'dist/vue-a11y-announcer.cjs.js',
+      file: 'dist/vue-announcer.cjs.js',
       format: 'cjs'
     },
     {
-      file: 'dist/vue-a11y-announcer.es.js',
+      file: 'dist/vue-announcer.es.js',
       format: 'es'
     },
     {
-      file: 'dist/vue-a11y-announcer.amd.js',
+      file: 'dist/vue-announcer.amd.js',
       format: 'amd'
     },
     {
-      name: 'VueA11yAnnouncer',
-      file: 'dist/vue-a11y-announcer.js',
+      name: 'VueAnnouncer',
+      file: 'dist/vue-announcer.js',
       format: 'umd'
     }
   ]

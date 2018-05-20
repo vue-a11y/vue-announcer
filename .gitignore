@@ -5,4 +5,4 @@ dist
 example/node_modules
 example/dist
 example/package-lock.json
-example/vue-a11y-announcer.js
+example/vue-announcer.js

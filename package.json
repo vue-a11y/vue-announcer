@@ -1,8 +1,8 @@
 {
-  "name": "vue-a11y-announcer",
+  "name": "vue-announcer",
   "version": "0.0.3",
   "description": "A simple way with Vue to announce any information to the screen readers.",
-  "main": "dist/vue-a11y-announcer.js",
+  "main": "dist/vue-announcer.js",
   "scripts": {
     "dev": "rollup --config rollup.config.dev.js --watch",
     "dist": "rollup --config rollup.config.prod.js",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vue-a11y/vue-a11y-announcer.git"
+    "url": "git+https://github.com/vue-a11y/vue-announcer.git"
   },
   "keywords": [
     "announcer",
@@ -33,9 +33,9 @@
   "author": "Alan Ktquez <ktquez@gmail.com> (https://medium.com/@ktquez)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vue-a11y/vue-a11y-announcer/issues"
+    "url": "https://github.com/vue-a11y/vue-announcer/issues"
   },
-  "homepage": "https://github.com/vue-a11y/vue-a11y-announcer#readme",
+  "homepage": "https://github.com/vue-a11y/vue-announcer#readme",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.3",

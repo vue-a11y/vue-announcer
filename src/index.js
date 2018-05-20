@@ -1,10 +1,10 @@
-import VueA11yAnnouncer from './vue-a11y-announcer.vue'
+import VueAnnouncer from './vue-announcer.vue'
 import { OPTIONS } from './constants'
 
 export default function install (Vue, options = {}, router = null) {
   options = {...options, ...OPTIONS}
 
-  Vue.component('VueAnnouncer', VueA11yAnnouncer)
+  Vue.component('VueAnnouncer', VueAnnouncer)
   Vue.prototype.$announcer = {
     set (message) {
       if (this.data) {
