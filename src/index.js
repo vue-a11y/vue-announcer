@@ -1,12 +1,22 @@
 import VueA11yAnnouncer from './vue-a11y-announcer.vue'
 import { OPTIONS } from './constants'
-import { set } from './utils'
 
 export default function install (Vue, options = {}, router = null) {
   options = {...options, ...OPTIONS}
 
   Vue.component('VueAnnouncer', VueA11yAnnouncer)
-  Vue.prototype.$announcer = { set, data: null }
+  Vue.prototype.$announcer = {
+    set (message) {
+      if (this.data) {
+        this.data.content = ''
+        Vue.nextTick()
+          .then(() => {
+            this.data.content = message
+          })
+      }
+    },
+    data: null
+  }
 
   // If set the router, will be announced the change of route
   if (router) {
