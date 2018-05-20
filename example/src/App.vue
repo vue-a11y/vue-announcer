@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <vue-announcer />
+    <!-- data-va is used for internal testing, it is not required -->
+    <vue-announcer data-va="announcer"/>
     <header>
       <router-link to="/" title="Vue.js logo" aria-label="Go to home page">
         <img src="./assets/logo.png" alt="Vue.js logo">
