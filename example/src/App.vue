@@ -1,19 +1,23 @@
 <template>
   <div id="app">
     <vue-announcer />
-    <router-link to="/" title="Vue.js logo">
-      <img src="./assets/logo.png" alt="Vue.js logo">
-    </router-link>
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li>
-        <router-link to="/about" title="Go to about page">About</router-link>
-      </li>
-      <li>
-        <router-link to="/contact" title="Go to contact page">Contact</router-link>
-      </li>
-    </ul>
+    <header>
+      <router-link to="/" title="Vue.js logo" aria-label="Go to home page">
+        <img src="./assets/logo.png" alt="Vue.js logo">
+      </router-link>
+      <h1>{{ msg }}</h1>
+      <h2>Essential Links</h2>
+      <nav>
+        <ul>
+          <li>
+            <router-link to="/about" title="Go to about page" aria-label="Go to about page">About</router-link>
+          </li>
+          <li>
+            <router-link to="/contact" title="Go to contact page" aria-label="Go to contact page">Contact</router-link>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
     <div class="main" role="main">
       <router-view />
@@ -57,6 +61,6 @@ li {
 }
 
 a {
-  color: #42b983;
+  color: #227952;
 }
 </style>
