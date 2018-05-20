@@ -8,7 +8,7 @@ import VueAnnounce from '../vue-a11y-announcer'
 
 Vue.use(VueHead)
 Vue.use(Toasted, {
-  duration: 6000 // Long duration 
+  duration: 10000 // Long duration
 })
 Vue.use(VueAnnounce, {}, router)
 Vue.config.productionTip = false
