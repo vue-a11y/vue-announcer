@@ -1,7 +1,8 @@
 <template>
   <div>
     <h2>About Page</h2>
-    <button type="button" @click="notify">
+    <!-- data-va is used for internal testing, it is not required -->
+    <button type="button" data-va="toasted" @click="notify">
       trigger notification
     </button>
   </div>
