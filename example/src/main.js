@@ -1,10 +1,15 @@
 import Vue from 'vue'
-import VueHead from 'vue-head'
 import App from './App.vue'
 import router from './router.js'
+
+import VueHead from 'vue-head'
+import Toasted from 'vue-toasted'
 import VueAnnounce from '../vue-a11y-announcer'
 
 Vue.use(VueHead)
+Vue.use(Toasted, {
+  duration: 6000 // Long duration 
+})
 Vue.use(VueAnnounce, {}, router)
 Vue.config.productionTip = false
 
