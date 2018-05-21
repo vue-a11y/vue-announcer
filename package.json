@@ -1,6 +1,6 @@
 {
   "name": "vue-announcer",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "A simple way with Vue to announce any information to the screen readers.",
   "main": "dist/vue-announcer.js",
   "scripts": {
