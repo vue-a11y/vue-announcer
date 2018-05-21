@@ -2,7 +2,7 @@
 
 Imagine browsing pages (routes), receiving alerts and notifications, having a countdown timer on the page, a progress bar or a loading, among others. Now imagine all this happening to people who have visual disabilities and who use screen readers.
 
-The idea of this plugin is to tell the screen reader what is happening and primarily if you use single-page application.
+The idea of this plugin is to tell the screen reader what is happening and primarily if you use single-page application.  
 Inspired by others in the community like:  
 https://haltersweb.github.io/Accessibility/spa.html *(Example of how creating an accessible single-page application)*  
 https://github.com/ember-a11y/a11y-announcer *(Ember A11y community)*  
