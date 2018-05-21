@@ -70,7 +70,7 @@ import VueAnnouncer from 'vue-announcer'
 Vue.use(VueAnnouncer, {}, router) 
 ```
 
-## Options
+### Options
 Key                | Data Type  | default      |
 ------------------ | ---------- | ------------ |
 `complementRoute`  | String     | `has loaded` |
@@ -79,11 +79,33 @@ Key                | Data Type  | default      |
 Example:
 ```javascript
 Vue.use(VueAnnouncer, {
-  complementRoute: 'ha cargado' // in spanish
+  complementRoute: 'ha cargado' // e.g. in spanish
 }, router) 
 ```
 
-**Note: The vue-announcer uses the global after hooks `router.afterEach` to announce the route changes.**
+### Custom message to each page (optional)
+You can set a property on the meta object, which will serve as information to get the message that will be announced to the screen reader on each page. e.g.:
+```javascript
+{
+  name: 'home',
+  path: '/',
+  component: Home,
+  meta: {
+    announcer: 'Página de inicio'
+  }
+}
+```
+
+When the page loads, the screen reader user will hear:
+```shell
+Página de inicio ha cargado
+```
+
+
+
+**Note:**
+- The plugin checks whether it was defined in the meta object, otherwise, without any problems, the title of the page being loaded will be used.
+- The vue-announcer uses the global after hooks `router.afterEach` to announce the route changes.
 
 ## Check live demo
 https://vue-announcer.surge.sh/
