@@ -2,20 +2,24 @@ import resolve from 'rollup-plugin-node-resolve'
 import replace from 'rollup-plugin-replace'
 import VueLoader from 'rollup-plugin-vue'
 import butternut from 'rollup-plugin-butternut'
-import babel from 'rollup-plugin-babel'
+import buble from 'rollup-plugin-buble'
 
 export default {
   input: 'src/index.js',
   plugins: [
-    babel({
-      include: [
-        'node_modules/vue-template-es2015-compiler'
-      ],
-      exclude: 'node_modules/**'
+    VueLoader({
+      compileTemplate: true
+    }),
+    buble({
+      objectAssign: 'Object.assign',
+      jsx: 'h'
     }),
     butternut(),
-    resolve(),
-    VueLoader(),
+    resolve({
+      jsnext: true,
+      main: true,
+      browser: true
+    }),
     replace({
       'process.env.NODE_ENV': JSON.stringify('production')
     })
