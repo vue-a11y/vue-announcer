@@ -2,7 +2,7 @@ import VueAnnouncer from './vue-announcer.vue'
 import { OPTIONS } from './constants'
 
 export default function install (Vue, options = {}, router = null) {
-  options = {...options, ...OPTIONS}
+  options = {...OPTIONS, ...options}
 
   Vue.component('VueAnnouncer', VueAnnouncer)
   Vue.prototype.$announcer = {
