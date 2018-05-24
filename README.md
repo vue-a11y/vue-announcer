@@ -110,9 +110,6 @@ Página de inicio ha cargado
 ## Check live demo
 https://vue-announcer.surge.sh/
 
-## Install in Nuxt.js
-In testing
-
 ## Run the tests
 ```shell
 git clone https://github.com/vue-a11y/vue-announcer.git vue-announcer
