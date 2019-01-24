@@ -1,3 +1,5 @@
+import {PluginFunction} from 'vue';
+
 export interface Announcer
 {
     data: Record<string, any>;
@@ -12,3 +14,10 @@ declare module 'vue/types/vue'
         $announcer: Announcer;
     }
 }
+
+declare class VueAnnouncer
+{
+    static install: PluginFunction<never>;
+}
+
+export default VueAnnouncer;
