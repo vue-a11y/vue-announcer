@@ -83,6 +83,22 @@ Vue.use(VueAnnouncer, {
 }, router) 
 ```
 
+### Methods
+**Note: These methods are registered on the `$announcer` property injected into the Vue instance**
+
+#### `$announcer.setComplementRoute(complementRoute)`
+
+If you need to set the `complementRoute` option dynamically without reloading the application, for example if you're
+dynamically loading translations, you can use this method to update it.
+
+```javascript
+export default {
+  onTranslationsUpdated (translations) {
+    this.$announcer.setComplementRoute(translations.complementRouteKey /* = 'ha cargado' */)
+  }
+}
+```
+
 ### Custom message to each page (optional)
 You can set a property on the meta object, which will serve as information to get the message that will be announced to the screen reader on each page. e.g.:
 ```javascript

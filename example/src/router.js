@@ -11,6 +11,11 @@ const router = new VueRouter({
   mode: 'history',
   routes: [
     {
+      beforeEnter (to, from, next) {
+        router.app.$announcer.setComplementRoute('has loaded')
+
+        next()
+      },
       name: 'home',
       path: '/',
       component: Home,
@@ -19,6 +24,11 @@ const router = new VueRouter({
       }
     },
     {
+      beforeEnter (to, from, next) {
+        router.app.$announcer.setComplementRoute('has loaded')
+
+        next()
+      },
       name: 'about',
       path: '/about',
       component: About,
@@ -27,6 +37,11 @@ const router = new VueRouter({
       }
     },
     {
+      beforeEnter (to, from, next) {
+        router.app.$announcer.setComplementRoute('has fully loaded')
+
+        next()
+      },
       name: 'contact',
       path: '/contact',
       component: Contact,

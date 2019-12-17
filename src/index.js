@@ -15,6 +15,14 @@ export default function install (Vue, options = {}, router = null) {
           })
       }
     },
+
+    setComplementRoute (complementRoute) {
+      if (typeof (complementRoute) !== 'string') {
+        return
+      }
+
+      options.complementRoute = complementRoute
+    },
     data: null
   }
 

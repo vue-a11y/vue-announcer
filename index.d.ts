@@ -5,6 +5,8 @@ export interface Announcer
     data: Record<string, any>;
 
     set(message: string): void;
+
+    setComplementRoute(complementRoute: string): void;
 }
 
 declare module 'vue/types/vue'
