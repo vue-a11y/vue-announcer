@@ -63,6 +63,7 @@
     "standard-version": "^4.3.0",
     "surge": "^0.21.3",
     "vue": "^2.5.16",
+    "vue-force-next-tick" : "^1.0.3",
     "vue-template-compiler": "^2.5.16"
   }
 }
