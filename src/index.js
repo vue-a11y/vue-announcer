@@ -5,15 +5,15 @@ import { OPTIONS } from './constants'
 export default function install (Vue, options = {}, router = null) {
   options = {...OPTIONS, ...options}
 
-  Vue.use(VueForceNextTick);
+  Vue.use(VueForceNextTick)
   Vue.component('VueAnnouncer', VueAnnouncer)
   Vue.prototype.$announcer = {
     set (message) {
       if (this.data) {
         this.data.content = ''
         Vue.$forceNextTick(() => {
-            this.data.content = message
-          })
+          this.data.content = message
+        })
       }
     },
 
