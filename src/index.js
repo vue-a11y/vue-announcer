@@ -1,16 +1,17 @@
 import VueAnnouncer from './vue-announcer.vue'
+import VueForceNextTick from 'vue-force-next-tick'
 import { OPTIONS } from './constants'
 
 export default function install (Vue, options = {}, router = null) {
   options = {...OPTIONS, ...options}
 
+  Vue.use(VueForceNextTick);
   Vue.component('VueAnnouncer', VueAnnouncer)
   Vue.prototype.$announcer = {
     set (message) {
       if (this.data) {
         this.data.content = ''
-        Vue.nextTick()
-          .then(() => {
+        Vue.$forceNextTick(() => {
             this.data.content = message
           })
       }
