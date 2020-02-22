@@ -1,9 +1,8 @@
-import resolve from 'rollup-plugin-node-resolve'
-import replace from 'rollup-plugin-replace'
-import VueLoader from 'rollup-plugin-vue'
-import buble from 'rollup-plugin-buble'
-import eslint from 'rollup-plugin-eslint'
+import resolve from '@rollup/plugin-node-resolve'
 import chokidar from 'chokidar'
+import buble from 'rollup-plugin-buble'
+import { eslint } from 'rollup-plugin-eslint'
+import vue from 'rollup-plugin-vue'
 
 export default {
   input: 'src/index.js',
@@ -12,30 +11,23 @@ export default {
     include: ['src/**']
   },
   plugins: [
+    resolve(),
     eslint({
       include: './src/**'
     }),
-    VueLoader({
+    vue({
       compileTemplate: true
     }),
     buble({
-      objectAssign: 'Object.assign',
-      jsx: 'h'
-    }),
-    resolve({
-      jsnext: true,
-      main: true,
-      browser: true
-    }),
-    replace({
-      'process.env.NODE_ENV': JSON.stringify('development')
+      objectAssign: 'Object.assign'
     })
   ],
   output: [
     {
       name: 'VueAnnouncer',
       file: 'example/vue-announcer.js',
-      format: 'umd'
+      format: 'umd',
+      exports: 'named'
     }
   ]
 }
