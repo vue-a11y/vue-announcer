@@ -30,13 +30,13 @@ describe('Announcer test', () => {
     cy.get('[data-va="toasted"]').click()
 
     cy.get('.toasted-container')
-        .find('.toasted')
-        .invoke('text')
-        .then(text1 => {
-          cy.get('[data-va="announcer"]').invoke('text').should(text2 => {
-            console.log(text1, text2)
-            expect(text1).to.eq(text2)
-          })
+      .find('.toasted')
+      .invoke('text')
+      .then(text1 => {
+        cy.get('[data-va="announcer"]').invoke('text').should(text2 => {
+          console.log(text1, text2)
+          expect(text1).to.eq(text2)
         })
+      })
   })
 })

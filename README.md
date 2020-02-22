@@ -158,7 +158,6 @@ After the commands just access the http://localhost:8080/
 - Check the open issues or open a new issue to start a discussion around your feature idea or the bug you found;
 - Fork repository, make changes and send a pull request;
 
-If you want a faster communication, find me on [@ktquez](https://twitter.com/ktquez)
-And follow us on Twitter [@vue_a11y](https://twitter.com/vue_a11y)
+Follow us on Twitter [@vue_a11y](https://twitter.com/vue_a11y)
 
 **Thank you**

@@ -1,6 +1,6 @@
-import VueAnnouncer from './vue-announcer.vue'
 import VueForceNextTick from 'vue-force-next-tick'
 import { OPTIONS } from './constants'
+import VueAnnouncer from './vue-announcer.vue'
 
 export default function install (Vue, options = {}, router = null) {
   options = {...OPTIONS, ...options}
@@ -30,7 +30,9 @@ export default function install (Vue, options = {}, router = null) {
   // If set the router, will be announced the change of route
   if (router) {
     router.afterEach(to => {
-      Vue.prototype.$announcer.set(`${to.meta.announcer || document.title.trim()} ${options.complementRoute}`)
+      setTimeout(() => {
+        Vue.prototype.$announcer.set(`${to.meta.announcer || document.title.trim()} ${options.complementRoute}`)
+      }, 2000)
     })
   }
 }
