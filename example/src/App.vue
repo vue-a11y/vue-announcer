@@ -11,6 +11,9 @@
       <nav>
         <ul>
           <li>
+            <router-link to="/posts/1" title="Go to post one page" aria-label="Go to example post page">My post</router-link>
+          </li>
+          <li>
             <router-link to="/about" title="Go to about page" aria-label="Go to about page">About</router-link>
           </li>
           <li>
@@ -20,9 +23,10 @@
       </nav>
     </header>
 
-    <div class="main" role="main">
+    <main class="main">
+      <hr>
       <router-view />
-    </div>
+    </main>
   </div>
 </template>
 
@@ -63,5 +67,10 @@ li {
 
 a {
   color: #227952;
+}
+.msg-error {
+  color: #d4351c;
+  padding: 10px;
+  font-weight: bold;
 }
 </style>

@@ -20,24 +20,15 @@ export default {
   name: 'About',
   data () {
     return {
-      title: '',
       errorMessage: null
     }
   },
   head () {
     return {
       title: {
-        inner: this.title
+        inner: 'About page'
       }
     }
-  },
-  created () {
-    // get data post in server
-    setTimeout(() => {
-      this.title = 'Title of my awesome post'
-      this.$emit('updateHead')
-      this.$announcer.set(`${this.title} has loaded`, 'polite') // It's also possible to use the default complementRoute (this.$announcer.options.complementRoute)
-    }, 2000)
   },
   methods: {
     notify () {
@@ -47,11 +38,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.msg-error {
-  color: #d4351c;
-  padding: 10px;
-  font-weight: bold;
-}
-</style>

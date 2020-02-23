@@ -45,7 +45,7 @@ export default function install (Vue, options = {}, router = null) {
       const announcer = to.meta.announcer || {}
 
       // Skip: Used, for example, when an async title exists, in which case the announcement is made manually by the set method.
-      // It is also possible to achieve the same result, using politeness: 'off', but it will be necessary 
+      // It is also possible to achieve the same result, using politeness: 'off', but it will be necessary
       // to set the "assertive" or "polite" when using the set method.
       // for example: this.$announcer.set('my async title', 'polite')
       if (announcer.skip) return

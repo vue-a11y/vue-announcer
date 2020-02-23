@@ -1,6 +1,7 @@
 import About from '@/pages/About'
 import Contact from '@/pages/Contact'
 import Home from '@/pages/Home'
+import Post from '@/pages/Post'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
@@ -23,7 +24,12 @@ const router = new VueRouter({
     {
       name: 'about',
       path: '/about',
-      component: About,
+      component: About
+    },
+    {
+      name: 'post',
+      path: '/posts/:id',
+      component: Post,
       meta: {
         announcer: {
           skip: true
