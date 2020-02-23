@@ -1,10 +1,10 @@
 import Vue from 'vue'
-import App from './App.vue'
-import router from './router.js'
-
 import VueHead from 'vue-head'
 import Toasted from 'vue-toasted'
 import VueAnnouncer from '../vue-announcer'
+import App from './App.vue'
+import router from './router.js'
+
 
 Vue.use(VueHead)
 Vue.use(Toasted, {

@@ -5,14 +5,14 @@
 </template>
 
 <script>
-  export default {
-    name: 'Contact',
-    head: {
-      title: {
-        inner: 'Contact page'
-      }
+export default {
+  name: 'Contact',
+  head: {
+    title: {
+      inner: 'Contact page'
     }
   }
+}
 </script>
 
 <style>
