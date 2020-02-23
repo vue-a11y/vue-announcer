@@ -16,7 +16,6 @@ const router = new VueRouter({
       component: Home,
       meta: {
         announcer: {
-          message: 'Home page',
           complementRoute: 'has loaded'
         }
       }
@@ -24,7 +23,12 @@ const router = new VueRouter({
     {
       name: 'about',
       path: '/about',
-      component: About
+      component: About,
+      meta: {
+        announcer: {
+          skip: true
+        }
+      }
     },
     {
       name: 'contact',
@@ -32,6 +36,7 @@ const router = new VueRouter({
       component: Contact,
       meta: {
         announcer: {
+          message: 'contact page',
           politeness: 'assetive',
           complementRoute: 'has fully loaded'
         }
