@@ -11,13 +11,14 @@ module.exports = {
     'plugin:vue-a11y/base'
   ],
   plugins: [
-    'vue',
     'cypress',
     'vue-a11y'
   ],
-  parser: "vue-eslint-parser",
   parserOptions: {
-    parser: 'babel-eslint',
-    sourceType: "module"
-  }
+    parser: 'babel-eslint'
+  },
+  rules: {
+    'no-console': 'off',
+    'vue-a11y/click-events-have-key-events': 'off'
+  } 
 }
