@@ -1,11 +1,13 @@
 <template>
-  <div>    
+  <div>
     <template v-show="post.id">
       <h2>{{ post.title }}</h2>
       <p>{{ post.body }}</p>
     </template>
     <template v-show="error">
-      <h2 class="msg-error">{{ error }}</h2>
+      <h2 class="msg-error">
+        {{ error }}
+      </h2>
     </template>
   </div>
 </template>

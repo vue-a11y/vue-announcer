@@ -1,10 +1,15 @@
+# Announce
+
+The `$announcer.set` method is available on the property injected into the Vue instance, so it is available everywhere in your application.
+With it it is possible to announce any necessary information and in real time to a person with a screen reader.
+
+### Method ($announcer.set)
+
+```vue
 <template>
   <div>
-    <h2>About Page</h2>
-    <!-- data-va is used for internal testing, it is not required -->
     <button
       type="button"
-      data-va="toasted"
       @click="notify"
     >
       show error
@@ -17,7 +22,7 @@
 
 <script>
 export default {
-  name: 'About',
+  name: '...',
   data () {
     return {
       errorMessage: null
@@ -28,13 +33,9 @@ export default {
       this.errorMessage = 'It\'s error message'
       this.$announcer.set(this.errorMessage, 'assertive')
     }
-  },
-  head () {
-    return {
-      title: {
-        inner: 'About page'
-      }
-    }
   }
 }
 </script>
+```
+
+[Learn more about the politeness settings and when to use.](/guide/accessibility.md)
