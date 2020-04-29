@@ -15,7 +15,7 @@ module.exports = {
             link: '/guide/'
           },
           {
-            text: 'How to',
+            text: 'Examples',
             link: '/demos/'
           }
         ],
