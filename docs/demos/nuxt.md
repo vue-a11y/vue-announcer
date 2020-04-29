@@ -1,3 +1,3 @@
-# Use in Nuxt.js
+# Nuxt.js
 
 ### Coming soon

@@ -1,23 +1,48 @@
 <template>
   <div id="app">
     <!-- data-va is used for internal testing, it is not required -->
-    <vue-announcer data-va="announcer"/>
+    <vue-announcer data-va="announcer" />
     <header>
-      <router-link to="/" title="Vue.js logo" aria-label="Go to home page">
-        <img src="./assets/logo.png" alt="Vue.js logo">
+      <router-link
+        to="/"
+        title="Vue.js logo"
+        aria-label="Go to home page"
+      >
+        <img
+          src="./assets/logo.png"
+          alt="Vue.js logo"
+        >
       </router-link>
       <h1>{{ msg }}</h1>
       <h2>Essential Links</h2>
       <nav>
         <ul>
           <li>
-            <router-link to="/posts/1" title="Go to post one page" aria-label="Go to example post page">My post</router-link>
+            <router-link
+              to="/posts/1"
+              title="Go to post one page"
+              aria-label="Go to example post page"
+            >
+              My post
+            </router-link>
           </li>
           <li>
-            <router-link to="/about" title="Go to about page" aria-label="Go to about page">About</router-link>
+            <router-link
+              to="/about"
+              title="Go to about page"
+              aria-label="Go to about page"
+            >
+              About
+            </router-link>
           </li>
           <li>
-            <router-link to="/contact" title="Go to contact page" aria-label="Go to contact page">Contact</router-link>
+            <router-link
+              to="/contact"
+              title="Go to contact page"
+              aria-label="Go to contact page"
+            >
+              Contact
+            </router-link>
           </li>
         </ul>
       </nav>
@@ -32,7 +57,7 @@
 
 <script>
 export default {
-  name: 'app',
+  name: 'App',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'

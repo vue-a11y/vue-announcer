@@ -1,3 +1,3 @@
-# Use in Vuepress
+# Vuepress
 
 ### Coming soon

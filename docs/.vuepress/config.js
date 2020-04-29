@@ -33,7 +33,7 @@ module.exports = {
             ]
           },
           {
-            title: 'How to',
+            title: 'Examples',
             collapsable: false,
             children: [
               '/demos/',
