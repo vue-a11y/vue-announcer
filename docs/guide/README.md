@@ -25,10 +25,9 @@ In your `App.vue`
 ```vue
 <template>
   <div>
-    <vue-announcer />
-    <!-- header code -->
-    <!-- router-view -->
-    <!-- footer code -->
+    <vue-announcer /> <!-- You can place it anywhere in your application -->
+    ...
   </div>
 </template>
 ```
+
