@@ -13,6 +13,7 @@
     "build:unpkg": "rollup --config rollup.config.prod.js --format iife --file dist/vue-announcer.min.js",
     "docs": "vuepress dev docs",
     "docs:build": "vuepress build docs",
+    "docs:publish": "surge docs/.vuepress/dist announcer.vue-a11y.com",
     "release": "standard-version",
     "test": "node_modules/.bin/cypress run",
     "test:open": "node_modules/.bin/cypress open",
