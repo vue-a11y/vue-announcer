@@ -5,6 +5,5 @@
 	"integrationFolder": "tests/e2e/integration",
 	"fileServerFolder": "demo",
 	"pluginsFile": false,
-	"supportFile": false,
-	"videoRecording": false
+	"supportFile": false
 }
