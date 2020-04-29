@@ -28,6 +28,14 @@ export default function install (Vue, options = {}, router = null) {
       })
     },
 
+    polite (message) {
+      return this.set(message, 'polite')
+    },
+
+    assertive (message) {
+      return this.set(message, 'assertive')
+    },
+
     reset () {
       this.data.content = ''
       this.data.politeness = this.options.politeness

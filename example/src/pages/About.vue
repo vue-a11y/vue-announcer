@@ -26,7 +26,7 @@ export default {
   methods: {
     notify () {
       this.errorMessage = 'It\'s error message'
-      this.$announcer.set(this.errorMessage, 'assertive')
+      this.$announcer.assertive(this.errorMessage)
     }
   },
   head () {

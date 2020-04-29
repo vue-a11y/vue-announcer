@@ -32,6 +32,8 @@ export default {
     notify () {
       this.errorMessage = 'It\'s error message'
       this.$announcer.set(this.errorMessage, 'assertive')
+      // or
+      this.$announcer.assertive(this.errorMessage)
     }
   }
 }

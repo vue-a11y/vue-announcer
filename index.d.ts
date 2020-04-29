@@ -6,7 +6,11 @@ export interface Announcer
 
     options: Record<string, object>;
 
-    set(message: string): void;
+    set(message: string, politeness: string): void;
+
+    polite(message: string): void;
+    
+    assertive(message: string): void;
 
     reset(): void;
 
