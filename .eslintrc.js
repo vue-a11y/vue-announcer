@@ -8,17 +8,16 @@ module.exports = {
   extends: [
     'plugin:vue/recommended',
     '@vue/standard',
-    'plugin:vue-a11y/base'
+    'plugin:vuejs-accessibility/recommended'
   ],
   plugins: [
     'cypress',
-    'vue-a11y'
+    'vuejs-accessibility'
   ],
   parserOptions: {
     parser: 'babel-eslint'
   },
   rules: {
-    'no-console': 'off',
-    'vue-a11y/click-events-have-key-events': 'off'
+    'no-console': 'off'
   } 
 }
