@@ -2,68 +2,18 @@
 
 Imagine browsing pages (routes), receiving alerts and notifications, having a countdown timer on the page, a progress bar, a loading or a change of route in a SPA. Now imagine all this happening to people who have visual disabilities and who use screen readers.  
 
-The [vue-announcer](https://github.com/vue-a11y/vue-announcer) provides an easy way to really tell what’s going on in your application to people using screen readers.
+The [@vue-a11y/announcer](https://github.com/vue-a11y/vue-announcer) (v2) provides an easy way to really tell what’s going on in your application to people using screen readers.
+
+> For vue-announcer version 1.* you can access [this link](https://github.com/vue-a11y/vue-announcer/tree/v1.0.6)
 
 Inspired by others in the community like:  
 - [Example of how creating an accessible single-page application](https://haltersweb.github.io/Accessibility/spa.html)
 - [Ember A11y community](https://github.com/ember-a11y/a11y-announcer)
 
-### Links
+## Links
 
-- [Documentation](https://announcer.vue-a11y.com/)
-- [Demos](https://announcer.vue-a11y.com/demos/)
-
-## Install package
-#### NPM
-```shell
-npm install -S vue-announcer
-```
-
-#### Yarn
-```shell
-yarn add vue-announcer
-```
----
-
-# Installation
-
-## Package
-
-#### NPM
-```shell
-npm install -S vue-announcer
-```
-
-#### Yarn
-```shell
-yarn add vue-announcer
-```
-
-## Basic usage
-
-```javascript
-import Vue from 'vue'
-import VueAnnouncer from 'vue-announcer'
-
-Vue.use(VueAnnouncer)
-```
-
-In your `App.vue`
-```vue
-<template>
-  <div>
-    <vue-announcer />
-    <!-- header code -->
-    <!-- router-view -->
-    <!-- footer code -->
-  </div>
-</template>
-```
-
-[see more in the documentation](https://announcer.vue-a11y.com/)
-
-## Check live demo
-https://vue-announcer.surge.sh/
+- [Documentation](https://vue-announcer-v2.surge.sh)
+- [Demos](https://vue-announcer-v2.surge.sh/demos/)
 
 ## Run the tests
 ```shell
