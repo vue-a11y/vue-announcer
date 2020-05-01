@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.1](https://github.com/vue-a11y/vue-announcer/compare/v2.0.0...v2.0.1) (2020-05-01)
+
+
+### Bug Fixes
+
+* Add setTimeout in afterEach to ensure the correct document.title ([50c3cae](https://github.com/vue-a11y/vue-announcer/commit/50c3cae08cab5616b8a77a07620c0c5b2989e5db))
+
 ## [2.0.0](https://github.com/vue-a11y/vue-announcer/compare/v1.0.6...v2.0.0) (2020-05-01)
 
 <a name="1.0.6"></a>
