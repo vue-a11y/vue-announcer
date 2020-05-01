@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!-- data-va is used for internal testing, it is not required -->
-    <vue-announcer data-va="announcer" />
+    <VueAnnouncer data-va="announcer" />
     <header>
       <router-link
         to="/"

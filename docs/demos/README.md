@@ -8,4 +8,4 @@
     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
 ></iframe>
 
-<a href="https://codesandbox.io/s/vue-announcer-vue-project-z049t" target="_blank" rel="noopener">Open Sandbox example</a>
+<a href="https://codesandbox.io/s/vue-announcer-vue-project-z049t" target="_blank" rel="noopener">Open sandbox example</a>

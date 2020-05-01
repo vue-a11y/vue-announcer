@@ -25,7 +25,7 @@ In your `App.vue`
 ```vue
 <template>
   <div>
-    <vue-announcer /> <!-- You can place it anywhere in your application -->
+    <VueAnnouncer /> <!-- You can place it anywhere in your application -->
     ...
   </div>
 </template>
