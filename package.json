@@ -13,12 +13,11 @@
     "build:unpkg": "rollup --config rollup.config.prod.js --format iife --file dist/vue-announcer.min.js",
     "docs": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "docs:publish": "surge docs/.vuepress/dist https://announcer.surge.sh",
+    "docs:publish": "surge docs/.vuepress/dist https://vue-announcer-v2.surge.sh",
     "release": "standard-version",
     "test": "node_modules/.bin/cypress run",
     "test:open": "node_modules/.bin/cypress open",
-    "projectPublish": "git push --follow-tags origin master && npm publish",
-    "publishDemo": "surge example"
+    "projectPublish": "git push --follow-tags origin master && npm publish"
   },
   "repository": {
     "type": "git",

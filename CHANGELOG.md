@@ -1,6 +1,8 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [2.0.0](https://github.com/vue-a11y/vue-announcer/compare/v1.0.6...v2.0.0) (2020-05-01)
 
 <a name="1.0.6"></a>
 ## [1.0.6](https://github.com/vue-a11y/vue-announcer/compare/v1.0.5...v1.0.6) (2020-01-08)
