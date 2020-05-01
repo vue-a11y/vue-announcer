@@ -12,7 +12,7 @@ It is used in most situations that present new information to users.
 The notification will take place at the next available point, without interruptions.
 
 ::: tip Note 
-In the [vue-announcer plugin](https://github.com/vue-a11y/vue-announcer/blob/master/src/index.js#L8) the default is `polite`
+In the [@vue-a11y/announcer plugin](https://github.com/vue-a11y/vue-announcer/blob/master/src/index.js#L8) the default is `polite`
 :::
 
 ### assertive

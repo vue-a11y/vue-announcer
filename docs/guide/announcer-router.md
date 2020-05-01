@@ -7,7 +7,7 @@ For page changes (routes) to be announced automatically, you only need to pass t
 ```javascript
 import Vue from 'vue'
 import router from './router'
-import VueAnnouncer from 'vue-announcer'
+import VueAnnouncer from '@vue-a11y/announcer'
 
 Vue.use(VueAnnouncer, {}, router) 
 ```
@@ -79,7 +79,7 @@ Key                | Data Type  | data                      | default           
 
 ::: tip Note
 - The plug-in checks whether the message to be announced has been defined in the meta.announcer object, otherwise the document title to be loaded will be announced.
-- The vue-announcer uses the global after hooks `router.afterEach` to announce the route changes.
+- The @vue-a11y/announcer uses the global after hooks `router.afterEach` to announce the route changes.
 :::
 
 ## Skip in specific route

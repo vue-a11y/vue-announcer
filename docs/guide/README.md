@@ -4,19 +4,19 @@
 
 #### NPM
 ```shell
-npm install -S vue-announcer
+npm install -S @vue-a11y/announcer
 ```
 
 #### Yarn
 ```shell
-yarn add vue-announcer
+yarn add @vue-a11y/announcer
 ```
 
 ## Basic usage
 
 ```javascript
 import Vue from 'vue'
-import VueAnnouncer from 'vue-announcer'
+import VueAnnouncer from '@vue-a11y/announcer'
 
 Vue.use(VueAnnouncer)
 ```
