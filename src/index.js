@@ -20,12 +20,8 @@ export default function install (Vue, options = {}, router = null) {
     set (message, politeness) {
       if (!this.data) return
       this.reset()
-      if (politeness) {
-        this.data.politeness = politeness
-      }
-      draf(() => {
-        this.data.content = message
-      })
+      this.data.politeness = politeness || this.data.politeness
+      this.data.content = message
     },
 
     polite (message) {
@@ -59,13 +55,15 @@ export default function install (Vue, options = {}, router = null) {
       if (announcer.skip) return
 
       // draf: Resolves the problem of getting the correct document.title when the meta announcer is not passed
-      // Tested on Vuepress
-      draf(() => {
-        const msg = announcer.message || document.title.trim()
-        const complement = announcer.complementRoute || options.complementRoute
-        const politeness = announcer.politeness || null
-        Vue.prototype.$announcer.set(`${msg} ${complement}`, politeness)
-      })
+      // Tested on Vuepress and Nuxt
+      setTimeout(() => {
+        draf(() => {
+          const msg = announcer.message || document.title.trim()
+          const complement = announcer.complementRoute || options.complementRoute
+          const politeness = announcer.politeness || null
+          Vue.prototype.$announcer.set(`${msg} ${complement}`, politeness)
+        })
+      }, 500)
     })
   }
 }
