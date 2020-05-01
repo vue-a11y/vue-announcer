@@ -1,41 +1,76 @@
 import VueAnnouncer from './vue-announcer.vue'
-import VueForceNextTick from 'vue-force-next-tick'
-import { OPTIONS } from './constants'
+
+const draf = (cb) => requestAnimationFrame(() => requestAnimationFrame(cb))
 
 export default function install (Vue, options = {}, router = null) {
-  options = {...OPTIONS, ...options}
+  // merge options
+  options = {
+    politeness: 'polite',
+    complementRoute: 'has loaded',
+    ...options
+  }
 
-  Vue.use(VueForceNextTick)
+  // Register vue-announcer component
   Vue.component('VueAnnouncer', VueAnnouncer)
+
   Vue.prototype.$announcer = {
-    set (message) {
-      if (this.data) {
-        this.data.content = ''
-        Vue.$forceNextTick(() => {
-          this.data.content = message
-        })
+    data: null,
+    options,
+
+    set (message, politeness) {
+      if (!this.data) return
+      this.reset()
+      if (politeness) {
+        this.data.politeness = politeness
       }
+      draf(() => {
+        this.data.content = message
+      })
+    },
+
+    polite (message) {
+      return this.set(message, 'polite')
+    },
+
+    assertive (message) {
+      return this.set(message, 'assertive')
+    },
+
+    reset () {
+      this.data.content = ''
+      this.data.politeness = this.options.politeness
     },
 
     setComplementRoute (complementRoute) {
-      if (typeof (complementRoute) !== 'string') {
-        return
-      }
-
+      if (typeof complementRoute !== 'string') return
       options.complementRoute = complementRoute
-    },
-    data: null
+    }
   }
 
   // If set the router, will be announced the change of route
   if (router) {
     router.afterEach(to => {
-      Vue.prototype.$announcer.set(`${to.meta.announcer || document.title.trim()} ${options.complementRoute}`)
+      const announcer = to.meta.announcer || {}
+
+      // Skip: Used, for example, when an async title exists, in which case the announcement is made manually by the set method.
+      // It is also possible to achieve the same result, using politeness: 'off', but it will be necessary
+      // to set the "assertive" or "polite" when using the set method.
+      // for example: this.$announcer.set('my async title', 'polite')
+      if (announcer.skip) return
+
+      // draf: Resolves the problem of getting the correct document.title when the meta announcer is not passed
+      // Tested on Vuepress
+      draf(() => {
+        const msg = announcer.message || document.title.trim()
+        const complement = announcer.complementRoute || options.complementRoute
+        const politeness = announcer.politeness || null
+        Vue.prototype.$announcer.set(`${msg} ${complement}`, politeness)
+      })
     })
   }
 }
 
-// auto install
+// Auto install
 if (typeof window !== 'undefined' && typeof window.Vue !== 'undefined') {
   window.Vue.use(install)
 }

@@ -2,17 +2,22 @@ module.exports = {
   root: true,
   env: {
     "cypress/globals": true,
-    browser: true,
-    node: true
+    node: true,
+    browser: true
   },
   extends: [
-    'standard',
-    'plugin:vue/essential'
+    'plugin:vue/recommended',
+    '@vue/standard',
+    'plugin:vuejs-accessibility/recommended'
   ],
   plugins: [
-    "cypress"
+    'cypress',
+    'vuejs-accessibility'
   ],
-  // add your custom rules here
-  rules: {},
-  globals: {}
+  parserOptions: {
+    parser: 'babel-eslint'
+  },
+  rules: {
+    'no-console': 'off'
+  } 
 }

@@ -1,9 +1,10 @@
+import About from '@/pages/About'
+import Contact from '@/pages/Contact'
+import Home from '@/pages/Home'
+import Post from '@/pages/Post'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import Home from '@/pages/Home'
-import About from '@/pages/About'
-import Contact from '@/pages/Contact'
 
 Vue.use(VueRouter)
 
@@ -11,42 +12,40 @@ const router = new VueRouter({
   mode: 'history',
   routes: [
     {
-      beforeEnter (to, from, next) {
-        router.app.$announcer.setComplementRoute('has loaded')
-
-        next()
-      },
       name: 'home',
       path: '/',
       component: Home,
       meta: {
-        announcer: 'Home page'
+        announcer: {
+          complementRoute: 'has loaded'
+        }
       }
     },
     {
-      beforeEnter (to, from, next) {
-        router.app.$announcer.setComplementRoute('has loaded')
-
-        next()
-      },
       name: 'about',
       path: '/about',
-      component: About,
+      component: About
+    },
+    {
+      name: 'post',
+      path: '/posts/:id',
+      component: Post,
       meta: {
-        announcer: 'About page'
+        announcer: {
+          skip: true
+        }
       }
     },
     {
-      beforeEnter (to, from, next) {
-        router.app.$announcer.setComplementRoute('has fully loaded')
-
-        next()
-      },
       name: 'contact',
       path: '/contact',
       component: Contact,
       meta: {
-        announcer: 'Contact page'
+        announcer: {
+          message: 'contact page',
+          politeness: 'assetive',
+          complementRoute: 'has fully loaded'
+        }
       }
     }
   ]

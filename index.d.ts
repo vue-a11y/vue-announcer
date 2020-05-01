@@ -1,10 +1,18 @@
-import {PluginFunction} from 'vue';
+import { PluginFunction } from 'vue';
 
 export interface Announcer
 {
     data: Record<string, any>;
 
-    set(message: string): void;
+    options: Record<string, object>;
+
+    set(message: string, politeness: string): void;
+
+    polite(message: string): void;
+    
+    assertive(message: string): void;
+
+    reset(): void;
 
     setComplementRoute(complementRoute: string): void;
 }
