@@ -1,7 +1,7 @@
 module.exports = {
   title: 'Vue announcer',
   description: '',
-  serviceWorker: true,  
+  serviceWorker: true,
   themeConfig: {
     home: false,
     repo: 'vue-a11y/vue-announcer',
