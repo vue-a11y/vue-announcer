@@ -1,6 +1,6 @@
 {
   "name": "@vue-a11y/announcer",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A simple way with Vue to announce any information to the screen readers.",
   "main": "dist/vue-announcer.umd.js",
   "module": "dist/vue-announcer.esm.js",

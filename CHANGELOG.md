@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.2](https://github.com/vue-a11y/vue-announcer/compare/v2.0.1...v2.0.2) (2020-05-08)
+
+
+### Bug Fixes
+
+* Adding templete option in plug-in vue rollup to build as production ([5c71b23](https://github.com/vue-a11y/vue-announcer/commit/5c71b2317a4bfd3503513fad43f2f975a2530365))
+
 ### [2.0.1](https://github.com/vue-a11y/vue-announcer/compare/v2.0.0...v2.0.1) (2020-05-01)
 
 
