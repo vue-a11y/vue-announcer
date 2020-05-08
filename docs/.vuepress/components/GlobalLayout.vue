@@ -1,6 +1,8 @@
 <template>
   <div id="global-layout">
-    <VueAnnouncer />
+    <ClientOnly>
+      <VueAnnouncer />
+    </ClientOnly>
     <component :is="layout"/>
   </div>
 </template>

@@ -17,7 +17,9 @@ Ok, now just insert the component `<VueAnnouncer />` in your main layout.
 ```vue
 <template>
   <div>
-    <VueAnnouncer /> <!-- You can place it anywhere in your application -->
+    <ClientOnly>
+      <VueAnnouncer /> <!-- You can place it anywhere in your application -->
+    </ClientOnly>
     ...
   </div>
 </template>
