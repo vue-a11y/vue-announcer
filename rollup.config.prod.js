@@ -8,7 +8,11 @@ export default {
   plugins: [
     commonjs(),
     vue({
-      compileTemplate: true
+      css: true,
+      compileTemplate: true,
+      template: {
+        isProduction: true
+      }
     }),
     buble({
       objectAssign: 'Object.assign'
