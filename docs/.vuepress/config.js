@@ -1,4 +1,5 @@
 module.exports = {
+  theme: 'vuepress-theme-default-vue-a11y',
   title: 'Vue announcer',
   description: '',
   serviceWorker: true,
@@ -6,6 +7,11 @@ module.exports = {
     home: false,
     repo: 'vue-a11y/vue-announcer',
     docsDir: 'docs',
+    colorMode: {
+      props: {
+        modes: ['light', 'dark', 'system', 'sepia']
+      }
+    },
     locales: {
       '/': {
         editLinkText: 'Edit this page on GitHub',

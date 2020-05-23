@@ -81,7 +81,8 @@
     "vue": "^2.6.11",
     "vue-jest": "^3.0.5",
     "vue-template-compiler": "^2.6.11",
-    "vuepress": "^1.3.1"
+    "vuepress": "^1.3.1",
+    "vuepress-theme-default-vue-a11y": "^0.1.5"
   },
   "directories": {
     "doc": "docs",
