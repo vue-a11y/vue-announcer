@@ -13,7 +13,7 @@
     "build:unpkg": "rollup --config rollup.config.prod.js --format iife --file dist/vue-announcer.min.js",
     "docs": "vuepress dev docs",
     "docs:build": "vuepress build docs --no-cache",
-    "docs:publish": "surge docs/.vuepress/dist https://vue-announcer-v2.surge.sh",
+    "docs:publish": "gh-pages -d docs/.vuepress/dist",
     "release": "standard-version",
     "test": "cypress run",
     "test:open": "cypress open",
@@ -42,7 +42,7 @@
   "bugs": {
     "url": "https://github.com/vue-a11y/vue-announcer/issues"
   },
-  "homepage": "https://github.com/vue-a11y/vue-announcer#readme",
+  "homepage": "https://vue-a11y.github.io/vue-announcer/",
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^7.1.1",
     "@vue/eslint-config-standard": "^5.1.0",
@@ -63,6 +63,7 @@
     "eslint-plugin-standard": "^4.0.1",
     "eslint-plugin-vue": "^6.1.2",
     "eslint-plugin-vuejs-accessibility": "^0.1.1",
+    "gh-pages": "^2.2.0",
     "jest": "^25.1.0",
     "jest-serializer-vue": "^2.0.2",
     "jest-transform-stub": "^2.0.0",
