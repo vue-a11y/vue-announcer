@@ -11,8 +11,8 @@
     "build:umd": "rollup --config rollup.config.prod.js --format umd --file dist/vue-announcer.umd.js",
     "build:es": "rollup --config rollup.config.prod.js --format es --file dist/vue-announcer.esm.js",
     "build:unpkg": "rollup --config rollup.config.prod.js --format iife --file dist/vue-announcer.min.js",
-    "docs": "vuepress dev docs",
-    "docs:build": "vuepress build docs --no-cache",
+    "docs": "vuepress dev docs --no-cache",
+    "docs:build": "vuepress build docs --no-cache && echo announcer.vue-a11y.com >> docs/.vuepress/dist/CNAME",
     "docs:publish": "gh-pages -d docs/.vuepress/dist",
     "release": "standard-version",
     "test": "cypress run",
@@ -78,12 +78,12 @@
     "rollup-plugin-terser": "^5.2.0",
     "rollup-plugin-vue": "^5.1.1",
     "standard-version": "^7.1.0",
-    "surge": "^0.21.3",
     "vue": "^2.6.11",
     "vue-jest": "^3.0.5",
     "vue-template-compiler": "^2.6.11",
     "vuepress": "^1.3.1",
-    "vuepress-theme-default-vue-a11y": "^0.1.8"
+    "vuepress-theme-default-vue-a11y": "^0.1.11",
+    "watchpack": "^1.6.1"
   },
   "directories": {
     "doc": "docs",
