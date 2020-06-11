@@ -1,7 +1,11 @@
 module.exports = {
   theme: 'vuepress-theme-default-vue-a11y',
   title: 'Vue announcer',
-  description: '',
+  description: 'A simple way with Vue to announce any useful information for screen readers.',
+  head: [
+    ['meta', { name: 'theme-color', content: '#fff' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }]
+  ],
   serviceWorker: true,
   themeConfig: {
     home: false,
