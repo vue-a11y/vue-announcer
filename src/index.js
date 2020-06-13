@@ -1,12 +1,13 @@
 import VueAnnouncer from './vue-announcer.vue'
-
-const draf = (cb) => requestAnimationFrame(() => requestAnimationFrame(cb))
+import { draf, defaultOptions } from './utils'
 
 export default function install (Vue, options = {}, router = null) {
+  if (install.installed) return
+  install.installed = true
+
   // merge options
   options = {
-    politeness: 'polite',
-    complementRoute: 'has loaded',
+    ...defaultOptions,
     ...options
   }
 
@@ -56,6 +57,7 @@ export default function install (Vue, options = {}, router = null) {
 
       // draf: Resolves the problem of getting the correct document.title when the meta announcer is not passed
       // Tested on Vuepress and Nuxt
+      if (Vue.prototype.$isServer) return
       setTimeout(() => {
         draf(() => {
           const msg = announcer.message || document.title.trim()
