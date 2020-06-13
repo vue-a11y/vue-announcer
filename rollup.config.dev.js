@@ -25,7 +25,7 @@ export default {
   output: [
     {
       name: 'VueAnnouncer',
-      file: 'example/vue-announcer.js',
+      file: 'demo/vue-announcer.js',
       format: 'umd',
       exports: 'named'
     }
