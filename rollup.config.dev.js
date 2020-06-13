@@ -1,6 +1,6 @@
+import buble from '@rollup/plugin-buble'
 import resolve from '@rollup/plugin-node-resolve'
 import chokidar from 'chokidar'
-import buble from 'rollup-plugin-buble'
 import { eslint } from 'rollup-plugin-eslint'
 import vue from 'rollup-plugin-vue'
 
