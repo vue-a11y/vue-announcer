@@ -6,6 +6,7 @@
   "module": "dist/vue-announcer.esm.js",
   "browser": "dist/vue-announcer.esm.js",
   "unpkg": "dist/vue-announcer.min.js",
+  "types": "index.d.ts",
   "scripts": {
     "dev": "rollup --config rollup.config.dev.js --watch",
     "build": "npm run build:ssr & npm run build:es & npm run build:unpkg",
