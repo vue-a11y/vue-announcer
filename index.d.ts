@@ -1,10 +1,15 @@
 import { PluginFunction } from 'vue';
 
-export interface Announcer
-{
+export interface AnnouncerPlugins {
+    name: string,
+    handler: any
+}
+export interface Announcer {
     data: Record<string, any>;
 
     options: Record<string, object>;
+
+    plugins?: AnnouncerPlugins[];
 
     set(message: string, politeness: string): void;
 
@@ -15,18 +20,17 @@ export interface Announcer
     reset(): void;
 
     setComplementRoute(complementRoute: string): void;
+
 }
 
-declare module 'vue/types/vue'
-{
+declare module 'vue/types/vue' {
     interface Vue
     {
         $announcer: Announcer;
     }
 }
 
-declare class VueAnnouncer
-{
+declare class VueAnnouncer {
     static install: PluginFunction<never>;
 }
 

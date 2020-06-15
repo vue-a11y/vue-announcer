@@ -1,6 +1,8 @@
 import VueAnnouncer from './vue-announcer.vue'
 import { draf, defaultOptions } from './utils'
 
+const announcerPlugins = {}
+
 export default function install (Vue, options = {}, router = null) {
   if (install.installed) return
   install.installed = true
@@ -38,10 +40,19 @@ export default function install (Vue, options = {}, router = null) {
       this.data.politeness = this.options.politeness
     },
 
+    plugins: announcerPlugins,
+
     setComplementRoute (complementRoute) {
       if (typeof complementRoute !== 'string') return
       options.complementRoute = complementRoute
     }
+  }
+
+  // Register plugins
+  if (options.plugins.length) {
+    options.plugins.forEach(({ name, handler }) => {
+      announcerPlugins[name] = handler.bind(Vue.prototype.$announcer)
+    })
   }
 
   // If set the router, will be announced the change of route

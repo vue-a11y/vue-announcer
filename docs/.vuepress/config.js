@@ -38,6 +38,7 @@ module.exports = {
               '/guide/',
               '/guide/announcer.md',
               '/guide/announcer-router.md',
+              '/guide/plugins.md',
               '/guide/accessibility.md',
               '/guide/support.md',
             ]
