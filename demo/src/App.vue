@@ -19,6 +19,15 @@
         <ul>
           <li>
             <router-link
+              to="login"
+              title="Go to example login page"
+              aria-label="Go to example login page"
+            >
+              Login
+            </router-link>
+          </li>
+          <li>
+            <router-link
               to="/posts/1"
               title="Go to post one page"
               aria-label="Go to example post page"
