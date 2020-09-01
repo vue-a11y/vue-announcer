@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/vue-a11y/vue-announcer/compare/v2.0.2...v2.1.0) (2020-09-01)
+
+
+### Features
+
+* Plugins ([3784fb9](https://github.com/vue-a11y/vue-announcer/commit/3784fb96332d8781a78df8fb2f2e7b6601e187ae))
+
+
+### Bug Fixes
+
+* Add types in package.json ([c92bd47](https://github.com/vue-a11y/vue-announcer/commit/c92bd47a545e6a8601532b8a245dc7b8b4bd1872))
+* Run router.afterEach only client ([d0238b2](https://github.com/vue-a11y/vue-announcer/commit/d0238b2b3d2f4d4a7704747c0e3b3f0762699b84))
+* Wait for the message to reset before setting the new value ([9062bd3](https://github.com/vue-a11y/vue-announcer/commit/9062bd3c19537a45910a8dc3c3904e2cb7ab0f03))
+
 ### [2.0.2](https://github.com/vue-a11y/vue-announcer/compare/v2.0.1...v2.0.2) (2020-05-08)
 
 
