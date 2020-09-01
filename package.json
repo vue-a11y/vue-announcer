@@ -22,7 +22,7 @@
     "release": "standard-version",
     "test": "cypress run",
     "test:open": "cypress open",
-    "projectPublish": "git push --follow-tags origin master && npm publish --access public"
+    "projectPublish": "git push --follow-tags origin master && npm run build && npm publish --access public"
   },
   "repository": {
     "type": "git",
