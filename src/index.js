@@ -23,8 +23,10 @@ export default function install (Vue, options = {}, router = null) {
     set (message, politeness) {
       if (!this.data) return
       this.reset()
-      this.data.politeness = politeness || this.data.politeness
-      this.data.content = message
+      draf(() => {
+        this.data.politeness = politeness || this.data.politeness
+        this.data.content = message
+      })
     },
 
     polite (message) {
