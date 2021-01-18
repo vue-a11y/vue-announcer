@@ -1,83 +1,70 @@
 <template>
-  <div id="app">
-    <!-- data-va is used for internal testing, it is not required -->
-    <VueAnnouncer data-va="announcer" />
-    <header>
-      <router-link
-        to="/"
-        title="Vue.js logo"
-        aria-label="Go to home page"
+  <header>
+    <router-link to="/" aria-label="Go to home page">
+      <img src="./assets/vue-a11y-logo.png" alt="Vue.js logo">
+    </router-link>
+    <h1>
+      <a
+        href="https://github.com/vue-a11y/vue-announcer/tree/next"
+        title="Vue Announcer for Vue 3"
+        rel="noopener noreferer"
       >
-        <img
-          src="./assets/logo.png"
-          alt="Vue.js logo"
-        >
-      </router-link>
-      <h1>{{ msg }}</h1>
-      <h2>Essential Links</h2>
-      <nav>
-        <ul>
-          <li>
-            <router-link
-              to="login"
-              title="Go to example login page"
-              aria-label="Go to example login page"
-            >
-              Login
-            </router-link>
-          </li>
-          <li>
-            <router-link
-              to="/posts/1"
-              title="Go to post one page"
-              aria-label="Go to example post page"
-            >
-              My post
-            </router-link>
-          </li>
-          <li>
-            <router-link
-              to="/about"
-              title="Go to about page"
-              aria-label="Go to about page"
-            >
-              About
-            </router-link>
-          </li>
-          <li>
-            <router-link
-              to="/contact"
-              title="Go to contact page"
-              aria-label="Go to contact page"
-            >
-              Contact
-            </router-link>
-          </li>
-        </ul>
-      </nav>
-    </header>
+        @vue-a11y/announcer
+      </a>
+    </h1>
+    <h2>Browse links with the screen reader enabled</h2>
+    <nav>
+      <ul>
+        <li>
+          <router-link
+            to="/post/1"
+            title="Go to post one page"
+            aria-label="Go to example post page"
+          >
+            My post
+          </router-link>
+        </li>
+        <li>
+          <router-link
+            to="/about"
+            title="Go to about page"
+            aria-label="Go to about page"
+          >
+            About
+          </router-link>
+        </li>
+        <li>
+          <router-link
+            to="/contact"
+            title="Go to contact page"
+            aria-label="Go to contact page"
+          >
+            Contact
+          </router-link>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-    <main class="main">
-      <hr>
-      <router-view />
-    </main>
-  </div>
+  <main class="main">
+    <hr>
+    <router-view/>
+  </main>
+  
+  <VueAnnouncer />
 </template>
 
-<script>
-export default {
-  name: 'App',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  }
-}
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  name: 'App'
+})
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -85,7 +72,10 @@ export default {
   margin-top: 60px;
 }
 
-h1, h2 {
+
+
+h1,
+h2 {
   font-weight: normal;
 }
 
@@ -97,6 +87,10 @@ ul {
 li {
   display: inline-block;
   margin: 0 10px;
+}
+
+img {
+  width: 150px;
 }
 
 a {

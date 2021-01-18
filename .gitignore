@@ -2,7 +2,3 @@ node_modules
 dist
 .editorconfig
 .DS_Store
-demo/node_modules
-demo/dist
-demo/package-lock.json
-demo/vue-announcer.js

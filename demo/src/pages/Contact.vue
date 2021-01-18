@@ -1,20 +1,11 @@
 <template>
-  <div>
-    <h2>Contact Page</h2>
-  </div>
+  <h1>Contact</h1>
 </template>
 
-<script>
-export default {
-  name: 'Contact',
-  head: {
-    title: {
-      inner: 'Contact page'
-    }
-  }
-}
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  name: 'Contact'
+})
 </script>
-
-<style>
-
-</style>
