@@ -1,6 +1,6 @@
 {
   "name": "@vue-a11y/announcer",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "types": "dist/index.d.ts",
   "main": "dist/announcer.cjs.js",
   "browser": "dist/announcer.es.js",
@@ -13,6 +13,9 @@
       "require": "./dist/announcer.cjs.js"
     }
   },
+  "files": [
+    "dist/*"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vuedx-typecheck . && vite build && npm run fixFiles",
