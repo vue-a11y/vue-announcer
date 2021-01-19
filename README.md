@@ -45,6 +45,18 @@ In your `App.vue`
 </template>
 ```
 
+### Style
+You can import the style via the `@vue-a11y/announcer/dist/index.css` path as in the previous one.
+
+However, if you are using a CSS tool like TailwindCSS or Bootstrap, you don't need to import the @vue-a11y/announcer style, as you just add the `sr-only` class to the component.
+
+```vue
+<template>
+  <VueAnnouncer class="sr-only" />
+  ...
+</template>
+```
+
 ## useAnnouncer
 
 We provide the Vue composition `useAnnouncer` to announce to a person with a screen reader any information needed, anywhere in your app and in real time.
