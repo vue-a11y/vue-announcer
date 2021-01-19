@@ -4,21 +4,24 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [
+    vue({ isProduction: true })
+  ],
   build: {
     cssCodeSplit: true,
     emptyOutDir: true,
     lib: {
       entry: path.resolve(__dirname, 'src'),
       name: 'VueAnnouncer',
-      formats: ['es', 'umd', 'iife']
+      formats: ['es', 'cjs', 'iife']
     },
     rollupOptions: {
-      external: ['vue'],
+      external: ['vue', 'vue-router'],
       output: {
         exports: 'named',
         globals: {
-          vue: 'Vue'
+          vue: 'Vue',
+          'vue-router': 'vueRouter'
         }
       }
     }
