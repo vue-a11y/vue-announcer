@@ -6,6 +6,9 @@ The [@vue-a11y/announcer@next](https://github.com/vue-a11y/vue-announcer/tree/ne
 
 > For vue-announcer version 2.* you can access [this link](https://github.com/vue-a11y/vue-announcer/tree/master)
 
+## Links
+- [Demo](https://vue-announcer.surge.sh/)
+
 ## Setup
 
 ### Installation
