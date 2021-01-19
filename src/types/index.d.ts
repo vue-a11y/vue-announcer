@@ -2,14 +2,13 @@ import { Ref } from 'vue'
 
 export declare type Politeness = 'off' | 'assertive' | 'polite'
 export declare type RouteComplement = string
-export declare type HasRouter = boolean
 export declare type Message = string
 
 export declare interface VueAnnouncerOptions {
   message?: Message
   politeness?: Politeness
   routeComplement?: RouteComplement
-  router?: HasRouter
+  router?: any
 }
 
 export declare interface VueAnnouncerData extends VueAnnouncerOptions, Ref {}

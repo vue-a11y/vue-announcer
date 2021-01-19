@@ -12,7 +12,6 @@
 import useAnnouncer from "../composable/useAnnouncer"
 import { inject, defineComponent, ref } from 'vue'
 import { VueAnnouncerMeta, VueAnnouncerProvide } from '../types'
-import { useRouter } from 'vue-router'
 import { draf, isClient, ProvideKey } from '../util'
 
 export default defineComponent({
@@ -23,8 +22,7 @@ export default defineComponent({
     const { announce } = useAnnouncer()
 
     if (data.value.router) {
-      const { afterEach } = useRouter()
-      afterEach(to => {
+      data.value.router.afterEach((to: any) => {
         const announcer = ref<VueAnnouncerMeta>({...to.meta.announcer} || {})
         if (announcer.value.skip || !isClient) return
 
