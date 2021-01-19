@@ -9,11 +9,11 @@
 </template>
 
 <script lang="ts">
+import useAnnouncer from "../composable/useAnnouncer"
 import { inject, defineComponent, ref } from 'vue'
-import { ProvideKey, useAnnouncer } from '../index'
 import { VueAnnouncerMeta, VueAnnouncerProvide } from '../types'
 import { useRouter } from 'vue-router'
-import { draf, isClient } from '../util'
+import { draf, isClient, ProvideKey } from '../util'
 
 export default defineComponent({
   name: 'VueAnnouncer',

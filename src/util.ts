@@ -4,6 +4,8 @@ export const draf = (cb: any) => requestAnimationFrame(() => requestAnimationFra
 
 export const isClient = typeof window !== 'undefined'
 
+export const ProvideKey = Symbol('_vue-announcer_')
+
 export const defaultOptions: VueAnnouncerOptions = {
   message: '',
   politeness: 'polite',

@@ -1,7 +1,6 @@
 import { inject, ref } from 'vue'
-import { ProvideKey } from '../index'
 import { UseAnnouncerReturn, VueAnnouncerProvide, Politeness } from '../types'
-import { draf } from '../util';
+import { draf, ProvideKey } from '../util';
 
 const currentRouteComplement = ref<string|null>(null)
 

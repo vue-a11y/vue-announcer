@@ -1,23 +1,6 @@
-import { App, ref } from 'vue'
-import { defaultOptions } from './util'
-import { VueAnnouncerData, VueAnnouncerOptions } from './types'
+import Plugin from './plugin'
 
-import VueAnnouncer from './components/Announcer.vue'
+export default Plugin
 
-export const ProvideKey = Symbol('_vue-announcer_')
+export { ProvideKey } from './util'
 export { default as useAnnouncer } from './composable/useAnnouncer'
-
-export default function install (app: App, options: VueAnnouncerOptions = {}) {
-  options = { ...defaultOptions, ...options }
-  app.component('VueAnnouncer', VueAnnouncer)
-  
-  const data = ref<VueAnnouncerData|null>(null)
-  const generateDefaultData = () => ({ message: '', ...options })
-
-  data.value = generateDefaultData()
-
-  app.provide(ProvideKey, {
-    data,
-    reset: generateDefaultData
-  })
-}
