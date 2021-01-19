@@ -1,10 +1,9 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-import VueAnnouncer from '../../dist/announcer.es'
-import '../../dist/index.css'
+import VueAnnouncer from '../../src'
 
 createApp(App)
-  .use(VueAnnouncer, { router: true })
+  .use(VueAnnouncer, { router })
   .use(router)
   .mount('#app')

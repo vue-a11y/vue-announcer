@@ -10,7 +10,7 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
-import { useAnnouncer } from '../../../dist/announcer.es'
+import { useAnnouncer } from '../../../src'
 
 export default defineComponent({
   name: 'Post',
