@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.1](https://github.com/vue-a11y/vue-announcer/compare/v3.0.0-beta.1...v3.0.1) (2021-01-19)
+
+
+### Bug Fixes
+
+* build plugin ([332524a](https://github.com/vue-a11y/vue-announcer/commit/332524a1f2d97ac304673ef976006f0330a4619b))
+* remove vue-router ([0423494](https://github.com/vue-a11y/vue-announcer/commit/042349491bfe5179626074f6e68adeec75f2d9af))
+* remove vue-router dependence ([1b3e65b](https://github.com/vue-a11y/vue-announcer/commit/1b3e65b3019d26cee0c1d822831f59cadcb155b9))
+
 ## [3.0.0-beta.3](https://github.com/vue-a11y/vue-announcer/compare/v3.0.0-beta.1...v3.0.0-beta.3) (2021-01-19)
 
 
