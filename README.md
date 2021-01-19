@@ -95,12 +95,12 @@ createApp(App)
   .mount('#app')
 ```
 ### options
-Key                | Data Type     | default      |
------------------- | ------------- | ------------ |
-`router`           | Router|false  | false        |
-`message`          | String        | ''           |
-`politeness`       | String        | `polite`     |
-`complementRoute`  | String        | `has loaded` |
+Key                | Data Type     | data                   | default      |
+------------------ | ------------- | ---------------------- | ------------ |
+`router`           | Router        |                        | false        |
+`message`          | String        |                        | ''           |
+`politeness`       | String        | polite, assertive, off | `polite`     |
+`complementRoute`  | String        |                        | `has loaded` |
 
 ### Custom announcer (object meta)
 
