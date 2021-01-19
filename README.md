@@ -28,7 +28,7 @@ import App from './App.vue'
 import router from './router'
 
 import VueAnnouncer from '@vue-a11y/announcer'
-import '@vue-a11y/announcer/index.css'
+import '@vue-a11y/announcer/dist/index.css'
 
 createApp(App)
   .use(VueAnnouncer)
@@ -75,12 +75,20 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import VueAnnouncer from '@vue-a11y/announcer'
+import '@vue-a11y/announcer/dist/index.css'
 
 createApp(App)
-  .use(VueAnnouncer, { router: true })
+  .use(VueAnnouncer, { router })
   .use(router)
   .mount('#app')
 ```
+### options
+Key                | Data Type     | default      |
+------------------ | ------------- | ------------ |
+`router`           | Router|false  | false        |
+`message`          | String        | ''           |
+`politeness`       | String        | `polite`     |
+`complementRoute`  | String        | `has loaded` |
 
 ### Custom announcer (object meta)
 
