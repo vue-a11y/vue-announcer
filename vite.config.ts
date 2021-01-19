@@ -16,12 +16,11 @@ export default defineConfig({
       formats: ['es', 'cjs', 'iife']
     },
     rollupOptions: {
-      external: ['vue', 'vue-router'],
+      external: ['vue'],
       output: {
         exports: 'named',
         globals: {
-          vue: 'Vue',
-          'vue-router': 'vueRouter'
+          vue: 'Vue'
         }
       }
     }
