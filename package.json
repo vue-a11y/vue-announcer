@@ -1,10 +1,7 @@
 {
   "name": "@vue-a11y/announcer",
-  "version": "3.0.0-beta.0",
-  "types": "dist/types/index.d.ts",
-  "files": [
-    "dist"
-  ],
+  "version": "3.0.0-beta.1",
+  "types": "dist/index.d.ts",
   "main": "dist/announcer.umd.js",
   "browser": "dist/announcer.es.js",
   "module": "dist/announcer.es.js",
@@ -19,7 +16,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vuedx-typecheck . && vite build && npm run fixFiles",
-    "fixFiles": "cp -r src/types dist && cp -a dist/@vue-a11y/. dist && rm -rf dist/@vue-a11y",
+    "fixFiles": "cp -a src/types/. dist && cp -a dist/@vue-a11y/. dist && rm -rf dist/@vue-a11y",
     "demo:dev": "cd demo && vite",
     "demo:build": "cd demo && vuedx-typecheck . && vite build",
     "demo:publish": "surge ./demo/dist https://vue-announcer.surge.sh/",

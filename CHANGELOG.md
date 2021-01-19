@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-beta.1](https://github.com/vue-a11y/vue-announcer/compare/v2.1.0...v3.0.0-beta.1) (2021-01-19)
+
+
+### Features
+
+* Vue 3 support ([2a06bf9](https://github.com/vue-a11y/vue-announcer/commit/2a06bf92d846a1ae39ad604c091813b8eb5d049b))
+
 ## [3.0.0-beta.0](https://github.com/vue-a11y/vue-announcer/compare/v2.1.0...v3.0.0-beta.0) (2021-01-19)
 
 
