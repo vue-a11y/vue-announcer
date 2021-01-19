@@ -1,8 +1,9 @@
 {
   "name": "@vue-a11y/announcer",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "types": "dist/index.d.ts",
   "main": "dist/announcer.cjs.js",
+  "style": "dist/index.css",
   "browser": "dist/announcer.es.js",
   "module": "dist/announcer.es.js",
   "unpkg": "dist/announcer.iife.js",
@@ -14,7 +15,8 @@
     }
   },
   "files": [
-    "dist/*"
+    "dist/*",
+    "dist/*.css"
   ],
   "scripts": {
     "dev": "vite",
