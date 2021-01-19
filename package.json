@@ -1,8 +1,8 @@
 {
   "name": "@vue-a11y/announcer",
-  "version": "3.0.0-beta.2",
+  "version": "3.0.0-beta.3",
   "types": "dist/index.d.ts",
-  "main": "dist/announcer.umd.js",
+  "main": "dist/announcer.cjs.js",
   "browser": "dist/announcer.es.js",
   "module": "dist/announcer.es.js",
   "unpkg": "dist/announcer.iife.js",
@@ -10,7 +10,7 @@
   "exports": {
     ".": {
       "import": "./dist/announcer.es.js",
-      "require": "./dist/announcer.umd.js"
+      "require": "./dist/announcer.cjs.js"
     }
   },
   "scripts": {
