@@ -1,7 +1,8 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-import VueAnnouncer from '../../src'
+import VueAnnouncer from '../../dist/announcer.es'
+import '../../dist/index.css'
 
 createApp(App)
   .use(VueAnnouncer, { router: true })

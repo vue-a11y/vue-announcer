@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts">
-import { useAnnouncer } from '../../../src'
+import { useAnnouncer } from '../../../dist/announcer.es'
 import { defineComponent, onMounted, ref } from 'vue'
 
 export default defineComponent({
