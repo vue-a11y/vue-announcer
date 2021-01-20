@@ -1,4 +1,11 @@
-# Introduction
+# [@vue-a11y/announcer](https://github.com/vue-a11y/vue-announcer/tree/next)
+
+---
+🔥 HEADS UP! You are in the Vue 3 compatible branch, [check the branch for Vue 2 support](https://github.com/vue-a11y/vue-announcer).
+
+---
+
+## Introduction
 
 Imagine browsing pages (routes), receiving alerts and notifications, having a countdown timer on the page, a progress bar, a loading or a change of route in a SPA. Now imagine all this happening to people who have visual disabilities and who use screen readers.  
 
