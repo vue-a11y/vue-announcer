@@ -18,7 +18,7 @@ Inspired by others in the community like:
 
 ## Links
 
-- [Documentation](https://vue-announcer-v2.surge.sh)
+- [Documentation](https://announcer.vue-a11y.com/)
 - [Demos](https://vue-announcer-v2.surge.sh/demos/)
 
 ## Run the tests
