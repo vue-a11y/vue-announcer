@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.1.2](https://github.com/vue-a11y/vue-announcer/compare/v3.1.1...v3.1.2) (2021-01-24)
+
+
+### Bug Fixes
+
+* Expose "set" method only to $announcer ([e0222e5](https://github.com/vue-a11y/vue-announcer/commit/e0222e56690c1a6e03e93053fe6de6551bd3a57d))
+
 ### [3.1.1](https://github.com/vue-a11y/vue-announcer/compare/v3.0.6...v3.1.1) (2021-01-24)
 
 
