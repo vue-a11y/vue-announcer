@@ -11,10 +11,9 @@ Imagine browsing pages (routes), receiving alerts and notifications, having a co
 
 The [@vue-a11y/announcer@next](https://github.com/vue-a11y/vue-announcer/tree/next) (v3.*) for Vue 3 provides an easy way to really tell what’s going on in your application to people using screen readers.
 
-> For vue-announcer version 2.* you can access [this link](https://github.com/vue-a11y/vue-announcer/tree/master)
-
 ## Links
 - [Demo](https://vue-announcer.surge.sh/)
+- [ARIA live regions](#aria-live-regions)
 
 ## Setup
 
@@ -75,7 +74,7 @@ const { assertive } = useAnnouncer()
 const { polite } = useAnnouncer()
 ```
 
-### Change routeComplement
+## Change routeComplement
 
 If you need to set the `routeComplement` option dynamically without reloading the application, for example if you're dynamically loading translations, you can use this method to update it.
 
@@ -109,7 +108,7 @@ Key                | Data Type     | data                   | default      |
 `politeness`       | String        | polite, assertive, off | `polite`     |
 `complementRoute`  | String        |                        | `has loaded` |
 
-### Custom announcer (object meta)
+## Custom announcer (object meta)
 
 You can customize the message by defining the announcer on the "meta" object for each specific route.
 
@@ -139,11 +138,11 @@ Key                | Data Type  | data                      | default           
 `skip`             | Boolean    |                           | false                               |
 `routeComplement`  | String     |                           | `has loaded` or set at installation |
 
-#### Note
+### Note
 - The plug-in checks whether the message to be announced has been defined in the meta.announcer object, otherwise the document title to be loaded will be announced.
 - The `@vue-a11y/announcer@next` uses the global after hooks `router.afterEach` to announce the route changes.
 
-### Skip in specific route
+## Skip in specific route
 Necessary for dynamic content pages that require asynchronous data to compose the page title.
 
 The skip property on the `meta.announcer` object is used to `skip` the automatic announcement made on the `router.afterEach`, that way you can announce when the asynchronous data is available.
@@ -153,7 +152,6 @@ For example:
 In you [`routes.js`](/demo/src/router/routes.ts)
 
 ```js
-// ...
 {
   name: 'post',
   path: '/posts/:id',
@@ -164,62 +162,53 @@ In you [`routes.js`](/demo/src/router/routes.ts)
     }
   }
 }
-// ...
 ```
 
-In you [`Post.vue`](/demo/src/pages/Post.vue)
+## ARIA live regions
 
-```vue
-<template>
-  <template v-if="post">
-    <h2>{{ post.title }}</h2>
-    <p>{{ post.body }}</p>
-  </template>
-  <template v-if="error">
-    <h2 class="msg-error">{{ error }}</h2>
-  </template>
-</template>
+"Using JavaScript, it is possible to dynamically change parts of a page without requiring the entire page to reload — for instance, to update a list of search results on the fly, or to display a discreet alert or notification which does not require user interaction. While these changes are usually visually apparent to users who can see the page, they may not be obvious to users of assistive technologies. ARIA live regions fill this gap and **provide a way to programmatically expose dynamic content changes in a way that can be announced by assistive technologies.**"
 
-<script lang="ts">
-import { defineComponent, ref } from 'vue'
-import { useAnnouncer } from '@vue-a11y/announcer'
+--- [ARIA live regions - Accessibility | MDN](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
 
-export default defineComponent({
-  name: 'Post',
+## Politeness settings
 
-  setup () {
-    const post: any = ref(null)
-    const error: any = ref(null)
-    const { polite, assertive } = useAnnouncer()
+You can use the options `polite`, `assertive` and `off`, if no configuration is defined, the default is `off`.
 
-    fetch(`https://jsonplaceholder.typicode.com/posts/1`)
-      .then(res => {
-        if (!res.ok) throw Error(res.statusText || "Error loading the post");
-        return res.json();
-      })
-      .then(res => {
-        post.value = { ...res };
-        polite(`${post.value.title} page has loaded`);
-      })
-      .catch(e => {
-        error.value = e.message;
-        assertive(error.value);
-      });
+### polite
+It is used in most situations that present new information to users.  
+The notification will take place at the next available point, without interruptions.
 
-    return { post, error }
-  }
-})
-</script>
+---
+NOTE: `polite` is default
+
+---
+
+### assertive
+It is used in situations where the notification is important enough to communicate it immediately, for example, error messages or alerts.
+
+
+```javascript
+const { assertive } = useAnnouncer()
+assertive('My notification error')
 ```
 
-# Browser Testing
+### off
+Is the default and prevent assistive technology from keeping up with changes.
+
+
+### Referencies
+
+- [ARIA live regions - Accessibility | MDN](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
+- [Using aria-live - Bitsofcode](https://bitsofco.de/using-aria-live/)
+
+## Browser Testing
 
 Vue Announcer was tested and works as expected in the latest versions of:
 
 - NVDA (Chrome) ✔️
 - ChromeVox (Chrome extension) ✔️
 
-## To test
+### To test
 
 - Android TalkBack
 - JAWS
