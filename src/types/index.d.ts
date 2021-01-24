@@ -27,3 +27,5 @@ export declare interface UseAnnouncerReturn {
   assertive: (message: Message) => void
   setRouteComplement: (routeComplement: RouteComplement) => void
 }
+
+export { }
