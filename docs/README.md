@@ -7,3 +7,9 @@ The [@vue-a11y/announcer](https://github.com/vue-a11y/vue-announcer) provides an
 Inspired by others in the community like:  
 - [Example of how creating an accessible single-page application](https://haltersweb.github.io/Accessibility/spa.html)
 - [Ember A11y community](https://github.com/ember-a11y/a11y-announcer)
+
+---
+
+## 🔥 Vue Announcer for Vue 3
+
+To use VueAnnouncer for Vue 3 you can learn more through the [README of the next branch](https://github.com/vue-a11y/vue-announcer/blob/next/README.md)
