@@ -19,7 +19,7 @@ export default defineComponent({
 
   setup () {
     const { data } = <VueAnnouncerProvide>inject(ProvideKey)
-    const { announce } = useAnnouncer()
+    const { set: announce } = useAnnouncer()
 
     if (data.value.router) {
       data.value.router.afterEach((to: any) => {

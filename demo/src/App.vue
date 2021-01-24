@@ -65,7 +65,7 @@ export default defineComponent({
 
   methods: {
     setError () {
-      this.$announcer.assertive('deu erro aqui')
+      this.$announcer.set('deu erro aqui', 'assertive')
     }
   }
 })

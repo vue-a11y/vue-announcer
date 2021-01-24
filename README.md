@@ -157,7 +157,7 @@ Key                | Data Type     | data                   | default      |
 `router`           | Router        |                        | false        |
 `message`          | String        |                        | ''           |
 `politeness`       | String        | polite, assertive, off | `polite`     |
-`complementRoute`  | String        |                        | `has loaded` |
+`routeComplement`  | String        |                        | `has loaded` |
 
 ## Custom announcer (object meta)
 
