@@ -3,6 +3,9 @@
     <router-link to="/" aria-label="Go to home page">
       <img src="./assets/vue-a11y-logo.png" alt="Vue.js logo">
     </router-link>
+    <button @click="setError">
+      Error
+    </button>
     <h1>
       <a
         href="https://github.com/vue-a11y/vue-announcer/tree/next"
@@ -58,7 +61,13 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'App'
+  name: 'App',
+
+  methods: {
+    setError () {
+      this.$announcer.assertive('deu erro aqui')
+    }
+  }
 })
 </script>
 

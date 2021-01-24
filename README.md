@@ -67,21 +67,72 @@ However, if you are using a CSS tool like TailwindCSS or Bootstrap, you don't ne
 
 We provide the Vue composition `useAnnouncer` to announce to a person with a screen reader any information needed, anywhere in your app and in real time.
 
+### Import
+
 ```js
-// e.g.
+import { useAnnouncer } from '@vue-a11y/announcer'
+```
+
+### Usage
+
+```js
 const { assertive } = useAnnouncer()
+assertive('My error notification')
+
 // or 
+
 const { polite } = useAnnouncer()
+polite('My info notification')
+```
+
+## Option API
+
+You can also use `this.$announcer` in your component.
+
+```js
+export default {
+  // ...
+  methods: {
+    setError() {
+      this.$announcer.assertive('My notification error')
+    }
+  }
+}
 ```
 
 ## Change routeComplement
 
 If you need to set the `routeComplement` option dynamically without reloading the application, for example if you're dynamically loading translations, you can use this method to update it.
 
+### Using Composition API
+
 ```js
-// e.g.
-const { setRouteComplement } = useAnnouncer()
-setRouteComplement(translations.routeComplementKey)
+export default {
+  setup () {
+    const { setRouteComplement } = useAnnouncer()
+    
+    function onTranslationsUpdated (translations) {
+      /* 'ha cargado' e.g. in spanish */
+      setRouteComplement(translations.routeComplementKey)
+    }
+    // ...
+  }
+}
+
+```
+
+### Using Option API
+
+```js
+export default {
+  // ...
+  methods: {
+    onTranslationsUpdated (translations) {
+      /* 'Foi carregada' e.g. in portuguese */
+      this.$announcer.setRouteComplement(translations.routeComplementKey)
+    }
+  }
+}
 ```
 
 ## Announce route changes
@@ -189,7 +240,7 @@ It is used in situations where the notification is important enough to communica
 
 ```javascript
 const { assertive } = useAnnouncer()
-assertive('My notification error')
+assertive('My error notification')
 ```
 
 ### off

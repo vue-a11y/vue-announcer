@@ -17,14 +17,13 @@ export declare interface VueAnnouncerMeta extends VueAnnouncerData {
   skip: boolean
 }
 
-export declare interface VueAnnouncerProvide {
+export declare interface VueAnnouncerProvide extends UseAnnouncerReturn {
   data: VueAnnouncerData
-  reset: () => VueAnnouncerData
 }
 
 export declare interface UseAnnouncerReturn {
+  announce: (message: Message, politeness: Politeness) => void
   polite: (message: Message) => void
   assertive: (message: Message) => void
   setRouteComplement: (routeComplement: RouteComplement) => void
-  announce: (message: Message, politeness: Politeness) => void
 }
