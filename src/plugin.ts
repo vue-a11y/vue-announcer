@@ -14,7 +14,7 @@ export default function install (app: App, options: VueAnnouncerOptions = {}) {
 
   data.value = generateDefaultData()
 
-  function set (message: string, politeness: Politeness|null) {
+  function announce (message: string, politeness: Politeness|null) {
     data.value = generateDefaultData()
     if (politeness) {
       data.value.politeness = politeness
@@ -26,11 +26,11 @@ export default function install (app: App, options: VueAnnouncerOptions = {}) {
   }
 
   function polite (message: string) {
-    return set(message, 'polite')
+    return announce(message, 'polite')
   }
 
   function assertive (message: string) {
-    return set(message, 'assertive')
+    return announce(message, 'assertive')
   }
 
   function setRouteComplement (routeComplement: string): void {
@@ -38,6 +38,6 @@ export default function install (app: App, options: VueAnnouncerOptions = {}) {
     currentRouteComplement.value = routeComplement
   }
 
-  app.provide(ProvideKey, { data, set, polite, assertive, setRouteComplement })
-  app.config.globalProperties.$announcer = { set, polite, assertive, setRouteComplement }
+  app.provide(ProvideKey, { data, announce, polite, assertive, setRouteComplement })
+  app.config.globalProperties.$announcer = { set: announce, polite, assertive, setRouteComplement }
 }
