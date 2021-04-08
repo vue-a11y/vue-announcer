@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.1.3](https://github.com/vue-a11y/vue-announcer/compare/v3.1.2...v3.1.3) (2021-04-08)
+
+
+### Bug Fixes
+
+* Generate types ([bc512ac](https://github.com/vue-a11y/vue-announcer/commit/bc512ac5be74f366f4885f059a1247d36cedc0ea))
+* shims file ([c925bfa](https://github.com/vue-a11y/vue-announcer/commit/c925bfab99412118a51ad05772db0d6e34c9da31))
+
 ### [3.1.2](https://github.com/vue-a11y/vue-announcer/compare/v3.1.1...v3.1.2) (2021-01-24)
 
 
