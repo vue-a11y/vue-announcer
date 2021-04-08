@@ -22,7 +22,7 @@ The [@vue-a11y/announcer@next](https://github.com/vue-a11y/vue-announcer/tree/ne
 ```shell
 npm install -S @vue-a11y/announcer@next
 # or
-yarn add -D @vue-a11y/announcer@next
+yarn add @vue-a11y/announcer@next
 ```
 
 ### Basic usage
@@ -34,7 +34,7 @@ import App from './App.vue'
 import router from './router'
 
 import VueAnnouncer from '@vue-a11y/announcer'
-import '@vue-a11y/announcer/dist/index.css'
+import '@vue-a11y/announcer/dist/style.css'
 
 createApp(App)
   .use(VueAnnouncer)
