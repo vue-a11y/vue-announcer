@@ -3,39 +3,35 @@
   "version": "3.1.2",
   "types": "dist/index.d.ts",
   "main": "dist/announcer.cjs.js",
-  "style": "dist/index.css",
+  "style": "dist/style.css",
   "browser": "dist/announcer.es.js",
   "module": "dist/announcer.es.js",
   "unpkg": "dist/announcer.iife.js",
   "jsdelivr": "dist/announcer.iife.js",
-  "exports": {
-    ".": {
-      "import": "./dist/announcer.es.js",
-      "require": "./dist/announcer.cjs.js"
-    }
-  },
   "scripts": {
     "dev": "vite",
-    "build": "vuedx-typecheck . && vite build && npm run fixFiles",
-    "fixFiles": "cp -a src/types/. dist && cp -a dist/@vue-a11y/. dist && rm -rf dist/@vue-a11y",
+    "build": "npm-run-all -s clean build:*",
+    "build:vite": "vue-tsc --noEmit && vite build",
+    "build:types": "tsc --emitDeclarationOnly",
     "demo:dev": "cd demo && vite",
-    "demo:build": "cd demo && vuedx-typecheck . && vite build",
+    "demo:build": "cd demo && yarn build:vite",
     "demo:publish": "surge ./demo/dist https://vue-announcer.surge.sh/",
+    "clean": "rm -rf dist",
     "release": "standard-version",
-    "project:publish": "git push --tags origin next && npm run build && npm publish --tag next"
+    "project:publish": "git push --tags origin next && yarn build && npm publish --access public --tag next"
   },
   "dependencies": {
-    "vue": "^3.0.5"
+    "vue": "^3.0.11"
   },
   "devDependencies": {
     "@types/node": "^14.14.21",
-    "@vitejs/plugin-vue": "^1.0.4",
-    "@vue/compiler-sfc": "^3.0.5",
-    "@vuedx/typecheck": "^0.6.0",
-    "@vuedx/typescript-plugin-vue": "^0.4.1",
+    "@vitejs/plugin-vue": "^1.2.1",
+    "@vue/compiler-sfc": "^3.0.11",
+    "npm-run-all": "^4.1.5",
     "standard-version": "^9.1.0",
     "typescript": "^4.1.3",
-    "vite": "^2.0.0-beta.12",
-    "vue-router": "^4.0.3"
+    "vite": "^2.1.5",
+    "vue-router": "^4.0.6",
+    "vue-tsc": "^0.0.21"
   }
 }

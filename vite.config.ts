@@ -8,8 +8,6 @@ export default defineConfig({
     vue({ isProduction: true })
   ],
   build: {
-    cssCodeSplit: true,
-    emptyOutDir: true,
     lib: {
       entry: path.resolve(__dirname, 'src'),
       name: 'VueAnnouncer',

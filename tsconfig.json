@@ -1,20 +1,17 @@
 {
   "compilerOptions": {
-    "rootDir": "./src",
-    "outDir": "./dist",
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
     "removeComments": true,
     "strict": true,
     "allowJs": true,
+    "outDir": "dist",
     "declaration": true,
-    "typeRoots": ["./src/types"],
     "sourceMap": true,
+    "esModuleInterop": true,
     "lib": ["esnext", "dom"],
-    "types": ["vite/client", "node"],
-    "plugins": [{ "name": "@vuedx/typescript-plugin-vue" }]
+    "types": ["vite/client", "node"]
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
-  "exclude": ["node_modules"]
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
 }
