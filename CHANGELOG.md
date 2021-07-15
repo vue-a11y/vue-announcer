@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.1.5](https://github.com/vue-a11y/vue-announcer/compare/v3.1.4...v3.1.5) (2021-07-15)
+
+
+### Bug Fixes
+
+* vue as peerDependencies ([6979127](https://github.com/vue-a11y/vue-announcer/commit/697912777e3783d887dada0c1d60bb10bdc8d62c))
+
 ### [3.1.4](https://github.com/vue-a11y/vue-announcer/compare/v3.1.3...v3.1.4) (2021-04-08)
 
 ### [3.1.3](https://github.com/vue-a11y/vue-announcer/compare/v3.1.2...v3.1.3) (2021-04-08)

@@ -1,6 +1,6 @@
 {
   "name": "@vue-a11y/announcer",
-  "version": "3.1.4",
+  "version": "3.1.5",
   "types": "dist/index.d.ts",
   "main": "dist/announcer.cjs.js",
   "style": "dist/style.css",
