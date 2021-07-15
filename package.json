@@ -20,8 +20,8 @@
     "release": "standard-version",
     "project:publish": "git push --tags origin next && yarn build && npm publish --access public --tag next"
   },
-  "dependencies": {
-    "vue": "^3.0.11"
+  "peerDependencies": {
+    "vue": "^3.0.0"
   },
   "devDependencies": {
     "@types/node": "^14.14.21",
