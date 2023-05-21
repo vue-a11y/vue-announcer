@@ -22,25 +22,38 @@ export default defineComponent({
     const { announce } = useAnnouncer()
 
     if (data.value.router) {
-      data.value.router.afterEach((to: any) => {
-        const announcer = ref<VueAnnouncerMeta>({...to.meta.announcer} || {})
-        if (announcer.value.skip || !isClient) return
+      if ('afterEach' in data.value.router) {
+        data.value.router.afterEach((to: any) => {
+          const announcer = ref<VueAnnouncerMeta>({...to.meta.announcer} || {})
+          if (announcer.value.skip || !isClient) return
 
-        setTimeout(() => {
-          draf(() => {
-            const msg = (announcer.value.message || document.title).trim()
-            const complement = (announcer.value.routeComplement || data.value.routeComplement).trim()
-            const politeness = announcer.value.politeness || null
-            announce(`${msg} ${complement}`, politeness)
-          })
-        }, 500)
-      })
+          setTimeout(() => {
+            draf(() => {
+              const msg = (announcer.value.message || document.title).trim()
+              const complement = (announcer.value.routeComplement || data.value.routeComplement).trim()
+              const politeness = announcer.value.politeness || null
+              announce(`${msg} ${complement}`, politeness)
+            })
+          }, 500)
+        })
+      } elseif ('on' in data.value.router) {
+        data.value.router.on('navigate', () => {
+          if (!isClient) return
+
+          setTimeout(() => {
+            draf(() => {
+              const msg = document.title.trim()
+              const complement = data.value.routeComplement.trim()
+              announce(`${msg} ${complement}`)
+            })
+          }, 500)
+        })
+      }
     }
 
     return { data }
   }
 })
-
 </script>
 
 <style scoped>
