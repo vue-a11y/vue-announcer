@@ -10,18 +10,17 @@
 
 <script lang="ts">
 import useAnnouncer from "../composable/useAnnouncer"
-import { inject, defineComponent, ref } from 'vue'
-import { VueAnnouncerMeta, VueAnnouncerProvide } from '../types'
-import { draf, isClient, ProvideKey } from '../util'
+import { defineComponent, ref } from 'vue'
+import { VueAnnouncerMeta } from '../types'
+import { draf, isClient } from '../util'
 
 export default defineComponent({
   name: 'VueAnnouncer',
 
   setup () {
-    const { data } = <VueAnnouncerProvide>inject(ProvideKey)
-    const { announce } = useAnnouncer()
+    const { data, announce } = useAnnouncer()
 
-    if (data.value.router) {
+    if (data.value && data.value.router) {
       data.value.router.afterEach((to: any) => {
         const announcer = ref<VueAnnouncerMeta>({...to.meta.announcer} || {})
         if (announcer.value.skip || !isClient) return

@@ -17,6 +17,7 @@
     "demo:build": "cd demo && yarn build:vite",
     "demo:publish": "surge ./demo/dist https://vue-announcer.surge.sh/",
     "clean": "rm -rf dist",
+    "test": "node --test tests/useAnnouncer.test.js",
     "release": "standard-version",
     "project:publish": "git push --tags origin next && yarn build && npm publish --access public --tag next"
   },
