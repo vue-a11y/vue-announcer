@@ -9,12 +9,12 @@ export default function install (app: App, options: VueAnnouncerOptions = {}) {
   app.component('VueAnnouncer', VueAnnouncer)
   
   const data = ref<VueAnnouncerData|null>(null)
-  const generateDefaultData = () => ({ message: '', ...options })
+  const generateDefaultData = () => ({ content: '', message: '', ...options })
   const currentRouteComplement = ref<string>(options.routeComplement!)
 
   data.value = generateDefaultData()
 
-  function announce (message: string, politeness: Politeness|null) {
+  function announce (message: string, politeness: Politeness|null = null) {
     data.value = generateDefaultData()
     if (politeness) {
       data.value.politeness = politeness
@@ -38,6 +38,19 @@ export default function install (app: App, options: VueAnnouncerOptions = {}) {
     currentRouteComplement.value = routeComplement
   }
 
-  app.provide(ProvideKey, { data, announce, polite, assertive, setRouteComplement })
-  app.config.globalProperties.$announcer = { set: announce, polite, assertive, setRouteComplement }
+  function reset () {
+    data.value = generateDefaultData()
+    currentRouteComplement.value = options.routeComplement!
+  }
+
+  app.provide(ProvideKey, {
+    data,
+    announce,
+    set: announce,
+    reset,
+    polite,
+    assertive,
+    setRouteComplement
+  })
+  app.config.globalProperties.$announcer = { set: announce, reset, polite, assertive, setRouteComplement }
 }

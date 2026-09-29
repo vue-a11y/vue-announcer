@@ -22,8 +22,11 @@ export interface VueAnnouncerProvide extends UseAnnouncerReturn {
 }
 
 export interface UseAnnouncerReturn {
-  announce: (message: Message, politeness: Politeness) => void
+  announce: (message: Message, politeness?: Politeness) => void
+  set: (message: Message, politeness?: Politeness) => void
+  reset: () => void
   polite: (message: Message) => void
   assertive: (message: Message) => void
   setRouteComplement: (routeComplement: RouteComplement) => void
+  data: VueAnnouncerData | Ref<any>
 }
